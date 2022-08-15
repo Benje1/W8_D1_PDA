@@ -47,11 +47,11 @@ describe('Calculator', () => {
     expect(runningTotal.textContent).toEqual('5')
   })
   it('should be able to subtract 4 from 7 and get 3', () => {
-    fireEvent.click(button4);
-    fireEvent.click(subtractButton);
     fireEvent.click(button7);
+    fireEvent.click(subtractButton);
+    fireEvent.click(button4);
     fireEvent.click(equalsButton)
-    expect(runningTotal.textContent).toEqual('-3')
+    expect(runningTotal.textContent).toEqual('3')
   })
   it('should be able to multiply 3 by 5 and get 15', () => {
     fireEvent.click(button3)
